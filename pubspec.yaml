@@ -1,14 +1,14 @@
-name: dart_achieve
-description: Dart Language Learning.
-version: 0.0.1+1
-# homepage: https://www.example.com
-# author: root <email@example.com>
+name: dart_console
+description: A sample command-line application.
+version: 0.1.8+12
+homepage: https://www.cooggo.com
+author: aaric <aaric@cooggo.com>
 
 environment:
   sdk: '>=2.1.0 <3.0.0'
 
-#dependencies:
-#  path: ^1.4.1
+dependencies:
+  web_socket_channel: ^1.0.13
 
 dev_dependencies:
   test: ^1.0.0

@@ -9,3 +9,10 @@ build/
 
 # Directory created by dartdoc
 doc/api/
+
+# Idea
+.idea/
+*.iml
+
+# Other
+*.log
