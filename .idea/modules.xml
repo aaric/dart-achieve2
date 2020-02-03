@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/dart-achieve.iml" filepath="$PROJECT_DIR$/.idea/dart-achieve.iml" />
-      <module fileurl="file://$PROJECT_DIR$/dart-achieve.iml" filepath="$PROJECT_DIR$/dart-achieve.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dart_console_01.iml" filepath="$PROJECT_DIR$/dart_console_01.iml" />
     </modules>
   </component>
 </project>
