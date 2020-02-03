@@ -1,8 +1,0 @@
-// This is a generated file; do not edit or check into version control.
-FLUTTER_ROOT=D:\Android\flutter-sdk-windows
-FLUTTER_APPLICATION_PATH=D:\Workspaces\android\dart_console
-FLUTTER_TARGET=lib/main.dart
-FLUTTER_BUILD_DIR=build
-SYMROOT=${SOURCE_ROOT}/../build\ios
-FLUTTER_FRAMEWORK_DIR=D:\Android\flutter-sdk-windows\bin\cache\artifacts\engine\ios
-FLUTTER_BUILD_NAME=0.1.3
