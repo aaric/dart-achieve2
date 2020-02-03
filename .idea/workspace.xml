@@ -50,6 +50,29 @@
       <option name="presentableId" value="Default" />
       <updated>1580372788373</updated>
     </task>
+    <task id="LOCAL-00001" summary="0.2.0-SNAPSHOT Dart Language">
+      <created>1580712342633</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1580712342633</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="0.2.0-SNAPSHOT Dart Language" />
+    <option name="LAST_COMMIT_MESSAGE" value="0.2.0-SNAPSHOT Dart Language" />
   </component>
 </project>
