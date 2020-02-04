@@ -54,6 +54,17 @@ void main(List<String> arguments) async {
   await math.loadLibrary();
   var random = math.Random();
   /*print(random.nextInt(10));*/
+
+  // 六、异步处理
+  /*await Future.wait([
+    Future.delayed(Duration(seconds: 3), () { print('step 1'); }),
+    Future.delayed(Duration(seconds: 2), () { print('step 2'); }),
+    Future.delayed(Duration(seconds: 1), () { print('step 3'); }),
+  ]).then((results) => print(results.length) );*/
+
+  await Future.delayed(Duration(seconds: 3), () { print('step 1'); });
+  await Future.delayed(Duration(seconds: 2), () { print('step 2'); });
+  await Future.delayed(Duration(seconds: 1), () { print('step 3'); });
 }
 
 abstract class Animal {
