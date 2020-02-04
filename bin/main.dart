@@ -1,6 +1,8 @@
 // 0.2.0-SNAPSHOT Dart Language
+import 'package:http/http.dart' as http;
+import 'dart:math' deferred as math;
 
-void main(List<String> arguments) {
+void main(List<String> arguments) async {
   // 一、变量与常量
   var num = 1;
   const w1 = 100;
@@ -28,4 +30,104 @@ void main(List<String> arguments) {
   // 2.5 map
   var m1 = {'x': 1, 'y': 2, 'z': 3};
   /*print(m1['x']);*/
+
+  // 三、函数
+  var sum_1 = add_1(1, 2);
+  var sum_2 = add_2(3);
+  var sum_3 = add_3(a: 4, b: 5);
+  // 匿名函数
+  var numbers = [1, 2, 3];
+  numbers.forEach((n) {
+    /*print(n);*/
+  });
+
+  // 四、Class
+  var p1 = Person(name: 'Aaric', age: 18);
+  /*p1.sayHello();*/
+  var p2 = Worker(name: 'Aaric', age: 18, salary: 2000);
+  /*p2.sayHello();
+  p2.wear();
+  p2.equip();*/
+
+  // 五、库
+  /*print(await http.read('https://www.baidu.com'));*/
+  await math.loadLibrary();
+  var random = math.Random();
+  /*print(random.nextInt(10));*/
+
+  // 六、异步处理
+  /*await Future.wait([
+    Future.delayed(Duration(seconds: 3), () { print('step 1'); }),
+    Future.delayed(Duration(seconds: 2), () { print('step 2'); }),
+    Future.delayed(Duration(seconds: 1), () { print('step 3'); }),
+  ]).then((results) => print(results.length) );*/
+
+  await Future.delayed(Duration(seconds: 3), () { print('step 1'); });
+  await Future.delayed(Duration(seconds: 2), () { print('step 2'); });
+  await Future.delayed(Duration(seconds: 1), () { print('step 3'); });
+}
+
+abstract class Animal {
+  void eat();
+}
+
+class Person extends Animal {
+  String name;
+  int age;
+
+  Person({String name = '', int age = 0}) {
+    this.name = name;
+    this.age = age;
+  }
+
+  void sayHello() {
+    print('Hello, ' + name);
+  }
+
+  @override
+  void eat() {
+    print('eat rice');
+  }
+}
+
+class SafetyHat {
+  void wear() {
+    print('wear safety hat');
+  }
+}
+
+class WorkTool {
+  void equip() {
+    print('get tool kit');
+  }
+}
+
+class Worker extends Person with SafetyHat, WorkTool {
+  int salary;
+
+  Worker({String name = '', int age = 0, int salary = 0}) {
+    this.name = name;
+    this.age = age;
+    this.salary = salary;
+  }
+
+  @override
+  void sayHello() {
+    print('Salary: ' + salary.toString());
+  }
+}
+
+// 完整参数
+int add_1(int a, int b) {
+  return a + b;
+}
+
+// 缺省参数
+int add_2(int a, [int b]) {
+  return a + (b ?? 0);
+}
+
+// 默认值
+int add_3({int a = 0, int b = 0}) {
+  return a + b;
 }
