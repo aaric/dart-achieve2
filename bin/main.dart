@@ -38,6 +38,65 @@ void main(List<String> arguments) {
   numbers.forEach((n) {
     /*print(n);*/
   });
+
+  // Class
+  var p1 = Person(name: 'Aaric', age: 18);
+  /*p1.sayHello();*/
+  var p2 = Worker(name: 'Aaric', age: 18, salary: 2000);
+  /*p2.sayHello();
+  p2.wear();
+  p2.equip();*/
+
+}
+
+abstract class Animal {
+  void eat();
+}
+
+class Person extends Animal {
+  String name;
+  int age;
+
+  Person({String name = '', int age = 0}) {
+    this.name = name;
+    this.age = age;
+  }
+
+  void sayHello() {
+    print('Hello, ' + name);
+  }
+
+  @override
+  void eat() {
+    print('eat rice');
+  }
+}
+
+class SafetyHat {
+  void wear() {
+    print('wear safety hat');
+  }
+}
+
+class WorkTool {
+  void equip() {
+    print('get tool kit');
+  }
+}
+
+class Worker extends Person with SafetyHat, WorkTool {
+  int salary;
+
+  Worker({String name = '', int age = 0, int salary = 0}) {
+    this.name = name;
+    this.age = age;
+    this.salary = salary;
+  }
+
+  @override
+  void sayHello() {
+    print('Salary: ' + salary.toString());
+  }
 }
 
 // 完整参数
