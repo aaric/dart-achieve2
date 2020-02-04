@@ -28,4 +28,29 @@ void main(List<String> arguments) {
   // 2.5 map
   var m1 = {'x': 1, 'y': 2, 'z': 3};
   /*print(m1['x']);*/
+
+  // 三、函数
+  var sum_1 = add_1(1, 2);
+  var sum_2 = add_2(3);
+  var sum_3 = add_3(a: 4, b: 5);
+  // 匿名函数
+  var numbers = [1, 2, 3];
+  numbers.forEach((n) {
+    /*print(n);*/
+  });
+}
+
+// 完整参数
+int add_1(int a, int b) {
+  return a + b;
+}
+
+// 缺省参数
+int add_2(int a, [int b]) {
+  return a + (b ?? 0);
+}
+
+// 默认值
+int add_3({int a = 0, int b = 0}) {
+  return a + b;
 }
