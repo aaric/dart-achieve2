@@ -1,6 +1,8 @@
 // 0.2.0-SNAPSHOT Dart Language
+import 'package:http/http.dart' as http;
+import 'dart:math' deferred as math;
 
-void main(List<String> arguments) {
+void main(List<String> arguments) async {
   // 一、变量与常量
   var num = 1;
   const w1 = 100;
@@ -39,7 +41,7 @@ void main(List<String> arguments) {
     /*print(n);*/
   });
 
-  // Class
+  // 四、Class
   var p1 = Person(name: 'Aaric', age: 18);
   /*p1.sayHello();*/
   var p2 = Worker(name: 'Aaric', age: 18, salary: 2000);
@@ -47,6 +49,11 @@ void main(List<String> arguments) {
   p2.wear();
   p2.equip();*/
 
+  // 五、库
+  /*print(await http.read('https://www.baidu.com'));*/
+  await math.loadLibrary();
+  var random = math.Random();
+  /*print(random.nextInt(10));*/
 }
 
 abstract class Animal {
