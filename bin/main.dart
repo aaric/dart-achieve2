@@ -62,9 +62,35 @@ void main(List<String> arguments) async {
     Future.delayed(Duration(seconds: 1), () { print('step 3'); }),
   ]).then((results) => print(results.length) );*/
 
-  await Future.delayed(Duration(seconds: 3), () { print('step 1'); });
-  await Future.delayed(Duration(seconds: 2), () { print('step 2'); });
-  await Future.delayed(Duration(seconds: 1), () { print('step 3'); });
+  await Future.delayed(Duration(seconds: 3), () { /*print('step 1');*/ });
+  await Future.delayed(Duration(seconds: 2), () { /*print('step 2');*/ });
+  await Future.delayed(Duration(seconds: 1), () { /*print('step 3');*/ });
+
+  // 七、异常捕获和异常类
+  try {
+    var result = 1 ~/ 0;
+    print('result: $result');
+  }/* catch (e, s) {
+    print(e);
+    print('stack:\n$s');
+  }*/ on IntegerDivisionByZeroException catch(e) {
+    print('Division Zero Error, $e');
+  } finally {
+    print('ok');
+  }
+
+  payIt(-1);
+
+}
+
+void payIt(int amount) {
+  if(amount < 0) {
+    throw PaymentException();
+  }
+}
+
+class PaymentException implements Exception {
+
 }
 
 abstract class Animal {
